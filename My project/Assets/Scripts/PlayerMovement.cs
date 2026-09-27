@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public float speed = 5f;
     public Rigidbody2D rb;
 
     //Runs 50x per second, good for physics calculations
@@ -12,6 +13,6 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 direction = new Vector2(horizontal, vertical).normalized;
 
-        rb.linearVelocity = direction * 5f;
+        rb.linearVelocity = direction * speed;
     }
 }
